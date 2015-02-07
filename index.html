@@ -12,7 +12,7 @@
 
 <body>
   <div id="container">
-    <h1>Your List App</h1>
+    <h1>My To Do List</h1>
     <div id="app">
       <div id='form-container'></div>
       <div id='list-container'></div>
@@ -53,10 +53,7 @@
     var List = React.createClass({
       getInitialState: function() {
         return (
-          {items: [
-            {description: 'a gallon of milk',  completed: true, id: 1},
-            {description: 'a stick of butter', completed: false, id: 2}
-          ]}
+          {items:[]}
         )
       },
 
@@ -81,5 +78,6 @@
 
     React.render(<CreationForm />, document.getElementById('form-container') )
     React.render(<List />, document.getElementById('list-container') )
+    ListStore.loadItems()
   </script>
 </body>
