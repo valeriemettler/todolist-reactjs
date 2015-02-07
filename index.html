@@ -33,7 +33,8 @@
         event.preventDefault()
         var description = this.refs.description.getDOMNode().value
         this.refs.description.getDOMNode().value = ''
-        alert('trying to create an item with description ' + description)
+        //alert('trying to create an item with description ' + description)
+        ListStore.addItem(description)
       }
     })
 
