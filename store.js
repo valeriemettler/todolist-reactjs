@@ -13,20 +13,20 @@ var findItemById = function(id) {
 ListStore = {
 
   getItems: function() {
-    return items;
+    return items
   },
 
   loadItems: function() {
     var loadRequest = $.ajax({
     type: 'GET',
     url: "https://listalous.herokuapp.com/lists/shopping/"
-  });
+  })
 
   loadRequest.done(function(dataFromServer) {
      items = dataFromServer.items
      notifyComponents()
-    });
+    })
   },
   addItem: function(itemDescription) {},
   toggleCompleteness: function(itemId) {}
-};
+}
